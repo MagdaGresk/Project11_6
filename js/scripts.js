@@ -27,7 +27,7 @@ $(function() {
 		        self.removeColumn()
 		    })
 		    $columnAddCard.click(function(event) {
-		        self.addCard(new Card(prompt("Enter the name of the card")))
+		        self.addCard(new Card(prompt('Enter the name of the card')))
 		    })
 		    // CONSTRUCTION COLUMN ELEMENT
 		    $column.append($columnTitle)
@@ -64,7 +64,7 @@ $(function() {
 		    // BINDING TO CLICK EVENT
 		    $cardDelete.click(function(){
 		        self.removeCard()
-		    });
+		    })
 
 		    // COMBINING BLOCKS AND RETURNING THE CARD
 		    $card.append($cardDelete)
@@ -84,7 +84,7 @@ $(function() {
 	    name: 'My Kanban Board',
 	    addColumn: function(column) {
 			this.$element.append(column.$element)
-			initSortable() //About this feature we will tell later
+			initSortable()
 		},
 	    $element: $('#board .column-container')
 	}
@@ -115,8 +115,8 @@ $(function() {
 	board.addColumn(doneColumn)
 
 	// CREATING CARDS
-	//var card1 = new Card('New task')
-	//var card2 = new Card('Create kanban boards')
+	var card1 = new Card('New task')
+	var card2 = new Card('Create kanban boards')
 
 	// ADDING CARDS TO COLUMNS
 	todoColumn.addCard(card1)
