@@ -1,0 +1,80 @@
+$fonts: 'Cutive Mono', monospace;
+$light-grey: #dfe6e9;
+$grey: #636e72;
+$blue: #0984e3;
+$red: #ff7675;
+$yellow: #ffeaa7;
+
+.board {
+	background-color: #dfe6e9;
+	height: auto;
+	max-width: auto;
+	min-height: 900px;
+}
+
+.board h1 {
+	color: $blue;
+	font-family: $fonts;
+	font-size: 50px;
+	font-weight: 700;
+	padding-top: 40px;
+	text-align: center;
+}
+
+button {
+	background-color: $blue;
+	border-radius: 20px;
+	font-family: $fonts;
+	font-size: 30px;
+	height: 40px;
+	margin: 3px;
+	text-align: center;
+	width: 240px;
+	.btn-delete {
+		background-color: $grey;
+		border-radius: 90px;
+		width: 40px;
+	}
+	.add-card {
+		background-color: $red;
+	}
+}
+
+.column-container {
+  	background-color: $grey;
+  	display: flex;
+  	height: auto;
+    justify-content: center;
+	margin: 50px auto;
+	max-width: 1500px;
+	padding: 10px;
+	text-align: center;
+}
+
+.column {
+	background-color: white;
+	font-family: $fonts;
+	margin: 10px;
+	min-width: 300px;
+	text-align: center;
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	h2 {
+		color: $red;
+		font-size: 40px;
+	}
+	li {
+		background-color: $yellow;
+		border: 2px solid $grey;
+		border-radius: 20px;
+		height: 150px;
+		margin: 5px;
+		width: 300px;
+	}
+	p {
+		font-size: 20px;
+	}
+}
