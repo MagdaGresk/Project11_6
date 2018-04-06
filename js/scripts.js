@@ -19,7 +19,7 @@ $(function() {
 		    var $column = $('<div>').addClass('column')
 		    var $columnTitle = $('<h2>').addClass('column-title').text(self.name)
 		    var $columnCardList = $('<ul>').addClass('column-card-list')
-		    var $columnDelete = $('<button>').addClass('btn-delete').text('x')
+		    var $columnDelete = $('<button>').addClass('btn-delete').text('*')
 		    var $columnAddCard = $('<button>').addClass('add-card').text('Add a card')
 
 		    // ADDING EVENTS
@@ -31,21 +31,21 @@ $(function() {
 		    })
 		    // CONSTRUCTION COLUMN ELEMENT
 		    $column.append($columnTitle)
-		        .append($columnDelete)
+				.append($columnDelete)
 		        .append($columnAddCard)
 		        .append($columnCardList)
 
 		    // RETURN OF CREATED COLUMN
-		    	return $column
+		    return $column
 		}
 	}
 
 	Column.prototype = {
 	    addCard: function(card) {
-	      this.$element.children('ul').append(card.$element)
+	    	this.$element.children('ul').append(card.$element)
 	    },
 	    removeColumn: function() {
-	      this.$element.remove()
+	    	this.$element.remove()
 	    }
 	}
 
@@ -59,7 +59,7 @@ $(function() {
 		    // CREATING THE BLOCKS
 		    var $card = $('<li>').addClass('card')
 		    var $cardDescription = $('<p>').addClass('card-description').text(self.description)
-		    var $cardDelete = $('<button>').addClass('btn-delete').text('x')
+		    var $cardDelete = $('<button>').addClass('btn-delete').text('*')
 
 		    // BINDING TO CLICK EVENT
 		    $cardDelete.click(function(){

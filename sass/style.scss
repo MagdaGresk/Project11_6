@@ -22,26 +22,34 @@ $yellow: #ffeaa7;
 }
 
 button {
-	background-color: $blue;
-	border-radius: 20px;
 	font-family: $fonts;
 	font-size: 30px;
 	height: 40px;
-	margin: 3px;
 	text-align: center;
-	width: 240px;
-	.btn-delete {
+	&.create-column {
+		background-color: $blue;
+		border-radius: 20px;
+		display: block;
+		margin: 40px auto;
+		width: 240px;
+	}
+	&.btn-delete {
 		background-color: $grey;
 		border-radius: 90px;
+		margin: 3px;
 		width: 40px;
 	}
-	.add-card {
+	&.add-card {
 		background-color: $red;
+		border-radius: 20px;
+		margin: 3px;
+		width: 240px;
 	}
 }
 
 .column-container {
-  	background-color: $grey;
+  	background: repeating-linear-gradient(-45deg, #55ee70 40%, #55acee 50%);
+  	border-radius: 20px;
   	display: flex;
   	height: auto;
     justify-content: center;
@@ -53,10 +61,14 @@ button {
 
 .column {
 	background-color: white;
+	border: 2px solid $grey;
+	border-radius: 20px;
 	font-family: $fonts;
 	margin: 10px;
 	min-width: 300px;
+	padding-bottom: 10px;
 	text-align: center;
+	width: 350px;
 	ul {
 		list-style-type: none;
 		margin: 0;
@@ -71,10 +83,21 @@ button {
 		border: 2px solid $grey;
 		border-radius: 20px;
 		height: 150px;
-		margin: 5px;
+		margin: 5px auto;
 		width: 300px;
 	}
 	p {
 		font-size: 20px;
+	}
+}
+
+@media (max-width: 768px) {
+	.column-container {
+		display: block;
+		margin: 0 auto;
+	}
+	.column {
+		display: block;
+		margin: 10px auto;
 	}
 }
